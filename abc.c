@@ -1,6 +1,5 @@
 #include <stdio.h> 
 #include <stdlib.h> 
-#include <locale.h>
 #include <abc.h>
 
 // Declaracao da Estrutura Nodo 
@@ -10,7 +9,7 @@ typedef struct sNodo {
 
 } Nodo;
 
-// Declaracao da Estrutura Lista Simplesmente Encadeada
+// Declaracao da Estrutura Lista Encadeada
 typedef struct sListaSimplesEnc {
 	Nodo *prim;
 }ListaSimplesEnc;
@@ -47,7 +46,7 @@ void inserirIni(ListaSimplesEnc *pList, int v) {
 	
 	} else {
 		
-		printf("Memória Insuficiente\n\n");
+		printf("Memoria Insuficiente\n\n");
 	}
 }
 
@@ -75,7 +74,7 @@ void inserirOrd(ListaSimplesEnc *pList, int v) {
 		printf("\nValor Inserido com Sucesso!\n\n");
 	} else {
 		
-		printf("Memória Insuficiente\n");
+		printf("Memoria Insuficiente\n");
 	}
 }
 
@@ -98,11 +97,11 @@ void removerEle(ListaSimplesEnc *pList, int v) {
 			free(pAtu);
 			printf("Valor Removido\n\n");
 		} else {
-	    	printf("Valor não Encontrado\n\n");
+	    	printf("Valor nao Encontrado\n\n");
 		}
 	} else {
 		
-	    printf("Lista Está Vazia\n\n");
+	    printf("Lista Esta Vazia\n\n");
 	}
 }
 // Remover no Inicio da Lista
@@ -115,7 +114,7 @@ void removerIni(ListaSimplesEnc *pList) {
 		
 	} else {
 		
-		printf("Lista Está Vazia\n\n");
+		printf("Lista Esta Vazia\n\n");
 	}
 }
 // Remover Todos os Elementos da Lista
@@ -131,7 +130,7 @@ void removerTudo(ListaSimplesEnc *pList) {
 		
 		printf("Todos os Elementos Foram Removidos!\n\n");
 	} else {
-		printf("\nLista Está Vazia\n\n");
+		printf("\nLista Esta Vazia\n\n");
 	}
 
 }
@@ -151,11 +150,11 @@ void alterarEle(ListaSimplesEnc *pList, int v1, int v2) {
 			pAtu->info = v2;
 			printf("\nValor Alterado\n\n");
 		} else {
-			printf("\nValor não Encontrado\n\n");
+			printf("\nValor nao Encontrado\n\n");
 		}
 	} 
     else {
-		printf("\nLista Está Vazia\n\n");
+		printf("\nLista Esta Vazia\n\n");
 	}
 }
 
@@ -168,7 +167,6 @@ int estaVazia(ListaSimplesEnc *pList) {
 
 int main(){
 
-    setlocale (LC_ALL, "Portuguese");
     // Inicio Variáveis
 	ListaSimplesEnc minhaLista;
 	int valor, op, valorAlt;
@@ -178,9 +176,9 @@ int main(){
 		
 		printf("\nEscolha uma Opção:\n");
 		
-		printf("\n(1) Inserir Elemento no Início da Lista\n");
+		printf("\n(1) Inserir Elemento no Inicio da Lista\n");
 		printf("(2) Inserir Elemento em Ordem na Lista\n");
-		printf("(3) Remover Elemento no Início da Lista\n");
+		printf("(3) Remover Elemento no Inicio da Lista\n");
 		printf("(4) Remover Elemento Específico da Lista\n");
 		printf("(5) Mostrar Lista\n");
 		printf("(6) Apagar Todos os Elementos da Lista\n");
@@ -220,7 +218,7 @@ int main(){
 			case 5: // Mostrar Lista
 				if (estaVazia(&minhaLista)) {
 					
-					printf("Lista Está Vazia\n\n");
+					printf("Lista Esta Vazia\n\n");
 				
 				} else {
 					mostrarLista(&minhaLista);
@@ -250,9 +248,10 @@ int main(){
 			
 			default:
 				
-				printf("\nERRO: Opção Inexistente! \n\n");
+				printf("\nERRO: Opcao Inexistente! \n\n");
 		}
 	} while ( op != 0 );
     return 0;
 }
+
 
