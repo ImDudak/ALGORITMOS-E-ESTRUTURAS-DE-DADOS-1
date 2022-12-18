@@ -1,6 +1,6 @@
 #include <stdio.h> 
 #include <stdlib.h> 
-#include <abc.h>
+#include "abc.h"
 
 // Declaracao da Estrutura Nodo 
 typedef struct sNodo {
@@ -174,7 +174,7 @@ int main(){
 	
 	do{
 		
-		printf("\nEscolha uma Opção:\n");
+		printf("\nEscolha uma Opcao:\n");
 		
 		printf("\n(1) Inserir Elemento no Inicio da Lista\n");
 		printf("(2) Inserir Elemento em Ordem na Lista\n");
