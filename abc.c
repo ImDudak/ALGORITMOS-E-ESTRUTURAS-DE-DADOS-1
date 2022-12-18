@@ -1,7 +1,7 @@
 #include <stdio.h> 
 #include <stdlib.h> 
 #include <locale.h>
-#include <C:\Users\dudak\Desktop\Programim in C\teste3\abc.h>
+#include <abc.h>
 
 // Declaracao da Estrutura Nodo 
 typedef struct sNodo {
